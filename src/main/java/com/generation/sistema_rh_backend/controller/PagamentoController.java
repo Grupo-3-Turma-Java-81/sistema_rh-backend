@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.sistema_rh_backend.model.Pagamento;
 import com.generation.sistema_rh_backend.repository.PagamentoRepository;
+import com.generation.sistema_rh_backend.service.PagamentoService;
 import com.generation.sistema_rh_backend.repository.FuncionarioRepository;
 
 import jakarta.validation.Valid;
@@ -33,7 +34,10 @@ public class PagamentoController {
 
     @Autowired
     private FuncionarioRepository funcionarioRepository;
-
+    
+    @Autowired
+    private PagamentoService pagamentoService;
+    
     @GetMapping()
     public ResponseEntity<List<Pagamento>> getAll(){
         return ResponseEntity.ok(pagamentoRepository.findAll());
@@ -53,11 +57,17 @@ public class PagamentoController {
     }
     
     @PostMapping
-    public ResponseEntity<Pagamento> post(@Valid @RequestBody Pagamento pagamento){
-        if(funcionarioRepository.existsById(pagamento.getFuncionario().getId()))       
-        return ResponseEntity.status(HttpStatus.CREATED)
-            .body(pagamentoRepository.save(pagamento));
-        
+    public ResponseEntity<Pagamento> post(@Valid @RequestBody Pagamento pagamento) {
+        if (funcionarioRepository.existsById(pagamento.getFuncionario().getId())) {
+
+            pagamento.setBonus(pagamentoService.calculo_bonus(pagamento));
+            pagamento.setDescontos(pagamentoService.calculo_desconto(pagamento));
+            pagamento.setValorFinal(pagamentoService.calculo_salarioFinal(pagamento));
+
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body(pagamentoRepository.save(pagamento));
+        }
+
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Funcionário não existe!", null);
     }
     

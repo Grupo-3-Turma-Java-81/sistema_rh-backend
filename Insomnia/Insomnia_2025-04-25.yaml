@@ -1,0 +1,574 @@
+type: collection.insomnia.rest/5.0
+name: sistema_rh
+meta:
+  id: wrk_26ab03fc89e74465be85210601cc42d3
+  created: 1745606492337
+  modified: 1745606492337
+collection:
+  - name: Sistema_rh-insomnia
+    meta:
+      id: fld_ef6f26a7e9624195b0dcb77981ec7671
+      created: 1745608734270
+      modified: 1745608783468
+      sortKey: -1745608734270
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_4444c77495fb448bb94748befd299f4c
+          created: 1745608902921
+          modified: 1745609069128
+          sortKey: -1745608902921
+        children:
+          - url: localhost:8080/usuarios/all
+            name: getAll - Buscar todos usuarios
+            meta:
+              id: req_0cdb18ae18eb4b30b52a7cb9ad97e5a5
+              created: 1745609070369
+              modified: 1745611331711
+              isPrivate: false
+              sortKey: -1745609070369
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_e30b62131fe0444a999130f2bbb0f493
+              - id: pair_33351edad8bb4a89b6cb01d464442bea
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/usuarios/1
+            name: getByID - Buscar usuarios por id
+            meta:
+              id: req_0cf8e3bc931643dabfe118cc5e89d5b2
+              created: 1745609237529
+              modified: 1745611415692
+              isPrivate: false
+              sortKey: -1745608993771
+            method: GET
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_88329f59aa7c413b9027de140e870de3
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_883ff60114f94e7f9525acccf6c6aec2
+              - id: pair_80b3bd55c43c46288e34aa273d427ff1
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/cadastrar
+            name: post - Cadastrar usuario
+            meta:
+              id: req_4bd19a24feb246aaa2df63f9a8473e6f
+              created: 1745609396415
+              modified: 1745611765277
+              isPrivate: false
+              sortKey: -1745608955472
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Jobson",
+                	"usuario": "jobson@gmail.com",
+                	"senha": "36854326",
+                	"foto": "foto.png"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/usuarios/atualizar
+            name: put - Atualizar usuario
+            meta:
+              id: req_8ef02d2a57e94a5da9817bc10c9f9e4e
+              created: 1745609455404
+              modified: 1745611583716
+              isPrivate: false
+              sortKey: -1745608936322.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"nome": "Cleitom da Silva",
+                	"usuario": "cletitombarbosa@gmail.com",
+                	"senha": "68754280",
+                	"foto": "foto.png"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_1476410ccdcd4118823a03e6907800a7
+              - id: pair_9c62425274114806bf7d1c4eae27090a
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/logar
+            name: post - Autenticar usuario real
+            meta:
+              id: req_bc4e69521dfc4c07a1eb040c539d0199
+              created: 1745610971717
+              modified: 1745611770451
+              isPrivate: false
+              sortKey: -1745608945897.25
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"usuario": "cletitombarbosa@gmail.com",
+                	"senha": "68754280"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Pagamentos
+        meta:
+          id: fld_991afe1c25ba4682b4e010b2ab3c140f
+          created: 1745609572781
+          modified: 1745609844855
+          sortKey: -1745608897251.5
+        children:
+          - url: localhost:8080/pagamentos
+            name: getAll - Buscar todos pagamentos
+            meta:
+              id: req_44386fdc17654a4983506a85931c545d
+              created: 1745609572782
+              modified: 1745613559399
+              isPrivate: false
+              sortKey: -1745609070369
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_658e6bc2477747ad83c595efaad5f2e8
+              - id: pair_798941771fb24621986affe77360630d
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/pagamentos/1
+            name: getByID - Buscar pagamento por id
+            meta:
+              id: req_5993610ef0da40f2a4a0f87f31f892ac
+              created: 1745609572782
+              modified: 1745613535962
+              isPrivate: false
+              sortKey: -1745608993771
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_01f4988d20f5442bbfdc3f7ba05a5cfc
+              - id: pair_e86b68c5bfb846e689054cf53f14cf17
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/pagamentos
+            name: post - Cadastrar pagamento
+            meta:
+              id: req_eeb22d5ca2694d6b86ea28e54c633607
+              created: 1745609572783
+              modified: 1745613742184
+              isPrivate: false
+              sortKey: -1745608955472
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"descricao": "Funcionario do ano",
+                	"salarioBaseHora": "20",
+                	"mesReferencia": "03-2025",
+                	"horasTotais": "176",
+                	"bonus": "5",
+                	"descontos": "1",
+                	"valorFinal": "3520.00",
+                	"funcionario": {
+                		"id": 2
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_6df5a3097c6b4374bda469e8bfdb8cfd
+              - name: User-Agentpair_7d329adbb39e44128a0eac49f09e3bde
+                value: insomnia/11.0.2
+                id: pair_987e3540ce4f40d6805653dda529a15e
+              - id: pair_7d329adbb39e44128a0eac49f09e3bde
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/pagamentos
+            name: put - Atualizar pagamneto
+            meta:
+              id: req_fd1e56cfa47d4713a64a25d2281be0d8
+              created: 1745609572784
+              modified: 1745614071186
+              isPrivate: false
+              sortKey: -1745608936322.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                	"descricao": "Funcionario do exemplar",
+                	"salarioBaseHora": "20",
+                	"mesReferencia": "03-2025",
+                	"horasTotais": "176",
+                	"bonus": "5",
+                	"descontos": "1",
+                	"valorFinal": "3520.00",
+                	"funcionario": {
+                		"id": 2
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_e255602f874b4201805926d4088ebd52
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_29a6c636a9ea4412b10715e288d09b33
+              - id: pair_c8c55a1929de43008f821e22355557f8
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/pagamentos/delete/2
+            name: delete - Deletar pagamento
+            meta:
+              id: req_afab5cb5688649109a8b37f2760e0ebb
+              created: 1745609572786
+              modified: 1745614101173
+              isPrivate: false
+              sortKey: -1745608926747.75
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_c9246a454e1441d69a966fea0acdc170
+              - id: pair_81494394427f46d98b94a4de441f6889
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/pagamentos/mes-referencia/03-2025
+            name: getByMesReferencia
+            meta:
+              id: req_0880d28e2f564d0288e4d445ac280b09
+              created: 1745609850148
+              modified: 1745613835204
+              isPrivate: false
+              sortKey: -1745609850148
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_ea45cfaba91e4a78be6c7aee637a35ef
+              - id: pair_af3abb9b756047459eb24ebf50e72f0b
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Funcionarios
+        meta:
+          id: fld_b84fadc140c14d5d8807475b317a66ac
+          created: 1745609969759
+          modified: 1745609969759
+          sortKey: -1745608888733.75
+        children:
+          - url: localhost:8080/funcionarios
+            name: getAll - Buscar todos funcionarios
+            meta:
+              id: req_7d92ec0e528a4a53bc5c5bcfcaee92fe
+              created: 1745609969761
+              modified: 1745612276001
+              isPrivate: false
+              sortKey: -1745609070369
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_d3d8f6448a7642e3b8dbd24ff9e357c5
+              - id: pair_800905b877484eee836575511d14482f
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/funcionarios/1
+            name: getByID - Buscar funcionario por id
+            meta:
+              id: req_6025f2b800a84d7e99cdfaa6df3e2444
+              created: 1745609969762
+              modified: 1745612304824
+              isPrivate: false
+              sortKey: -1745608993771
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_41552463c08e4c10a8f611f9914d1c5e
+              - id: pair_47b77c01f7d64a6fb7a1c2a20aef11de
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/funcionarios
+            name: post - Cadastrar funcionario
+            meta:
+              id: req_cf46bd0aa3864ed38b37c43dae6a0d47
+              created: 1745609969766
+              modified: 1745612569717
+              isPrivate: false
+              sortKey: -1745608955472
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Vitor Gabriel",
+                	"cargo": "Desemvolverdor Junior",
+                	"departamento": "TI"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_a81bce4bcd2944bd9f99a8d008f2d3f3
+              - name: User-Agent
+                value: insomnia/11.0.2pair_cbcec9a24ccb419abc1a13229e0f577d
+                id: pair_369e89064d9943779ff81f77d1e7fa18
+              - id: pair_cbcec9a24ccb419abc1a13229e0f577d
+                name: Authorization
+                value: Beapair_cbcec9a24ccb419abc1a13229e0f577drer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/funcionarios
+            name: put - Atualizar funcionarios
+            meta:
+              id: req_a6a07bebd50f4eaf95ebb74abed18dbe
+              created: 1745609969767
+              modified: 1745612465436
+              isPrivate: false
+              sortKey: -1745608936322.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"nome": "Gabriel Vitor",
+                	"cargo": "Desenvolvedor Pleno",
+                	"departamento": "TI"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_1e2b930c0d3b4f09bb7ebe93058aabab
+              - id: pair_aba71844ef2f4e248d1eac996c03d612
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/funcionarios/delete/1
+            name: delete - Deletar funcionario
+            meta:
+              id: req_c9ff7c09d08c4704a24f4c7227337ad7
+              created: 1745609969769
+              modified: 1745612516409
+              isPrivate: false
+              sortKey: -1745608926747.75
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_019c4a09a3c54a9c9db0315f957c7498
+              - id: pair_d9b1543db34648069bdc6c77678625c8
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8080/funcionarios/nome/Vitor
+            name: getByNome - Buscar por nome
+            meta:
+              id: req_dd053befe81641059e093a8f9d517a68
+              created: 1745609969770
+              modified: 1745612253827
+              isPrivate: false
+              sortKey: -1745609850148
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+                id: pair_7c87982dff0643b08598e25edbc88833
+              - id: pair_f292db2602ad422280a2ea67ea960ab6
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGV0aXRvbWJhcmJvc2FAZ21haWwuY29tIiwiaWF0IjoxNzQ1NjExMDQ1LCJleHAiOjE3NDU2MTQ2NDV9.sDqEwL-xpoMPpwQ_O9G6Js_gqpC_MY5Na8zC8pspFvA
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d254e79561acf26d81cb5d2fb5614809f69c3fe0
+    created: 1745606492343
+    modified: 1745606492343
+environments:
+  name: Base Environment
+  meta:
+    id: env_d254e79561acf26d81cb5d2fb5614809f69c3fe0
+    created: 1745606492341
+    modified: 1745606492341
+    isPrivate: false

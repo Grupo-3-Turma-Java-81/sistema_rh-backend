@@ -22,10 +22,6 @@ public class Pagamento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotBlank
-	@Size(min = 5, max = 200)
-	private String descricao;
-
 	@NotNull
 	private BigDecimal salarioBaseHora;
 
@@ -63,14 +59,6 @@ public class Pagamento {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 
 	public BigDecimal getSalarioBaseHora() {

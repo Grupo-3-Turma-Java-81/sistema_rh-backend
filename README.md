@@ -97,12 +97,34 @@ Dessa forma, o NeoRH automatiza e moderniza o setor de RH, proporcionando um amb
 | Maven           | Gerenciador de dependências                         |
 | Insomnia        | Testes de endpoints RESTful                         |
 | Trello          | Organização e gerenciamento das tarefas do projeto  |
+| Discord         | Para comunicação da equipe                          |
 
 
+## 🧪 Testes com Insomnia/Postman
 
-## 🧪 Testes
+Um arquivo .yaml com as requisições já prontas está disponível na pasta insomnia.
+Basta importar no Insomnia/Postman e começar a testar!
 
-As funcionalidades da API foram testadas utilizando o **Insomnia**, simulando requisições HTTP para validação de cada endpoint.
+## ▶️ Como Rodar o Projeto
+1. Clone o repositório
+2. Configure o banco de dados MySQL no arquivo application.properties:
+    Abra o arquivo src/main/resources/application.properties e configure os parâmetros de conexão com o banco de dados MySQL de acordo com o que está configurado no seu ambiente local:
+
+    spring.datasource.url=jdbc:mysql://localhost:3306/sistema_rh-backend
+    spring.datasource.username=seu_usuario       # Substitua 'seu_usuario' pelo nome de usuário do MySQL da sua máquina
+    spring.datasource.password=sua_senha         # Substitua 'sua_senha' pela senha do usuário do MySQL na sua máquina
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+
+Importante: Lembre-se de substituir seu_usuario e sua_senha pelos dados corretos do MySQL configurados na sua máquina.
+
+3. Execute a aplicação:
+    Pela IDE:
+    - Abra o arquivo SistemaRhBackendApplication.java (classe principal do Spring Boot).
+
+    - Clique com o botão esquerdo do mouse em cima do arquivo.
+
+    - Procure e clique na opção Run Java para rodar a aplicação.
 
 
 

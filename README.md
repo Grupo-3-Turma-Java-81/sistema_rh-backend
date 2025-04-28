@@ -55,7 +55,6 @@ Dessa forma, o NeoRH automatiza e moderniza o setor de RH, proporcionando um amb
 - `id`: Identificador único do pagamento
 - `bonus`: valor a ser pago de bônus
 - `descontos`: valor a ser descontado do pagamento
-- `descricao`: descrição de pagamento
 - `horas_totais`: Total de horas a serem consideradas no pagamento
 - `mes_referencia`: Mês ao qual se refere o pagamento
 - `salario_base_hora`: Salário base por hora

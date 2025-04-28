@@ -132,12 +132,12 @@ Importante: Lembre-se de substituir seu_usuario e sua_senha pelos dados corretos
 
 | Nome              | Função         | GitHub                                   |
 |-------------------|----------------|-------------------------------------------|
-| Camila Lima       | Desenvolvedora | [camilalimas](https://github.com/camilalimas)|
+| Camila Lima       | Product Owner  | [camilalimas](https://github.com/camilalimas)|
 | João Andrade      | Desenvolvedor  | [JoaoAndrade-dev](https://github.com/JoaoAndrade-dev)|
-| Karina Camargo    | Tester         | [araujokahh](https://github.com/araujokahh)|
+| Karina Camargo    | Desenvolvedora | [araujokahh](https://github.com/araujokahh)|
 | Luan Lazarine     | Desenvolvedor  | [Lazarine1996](https://github.com/Lazarine1996)|
-| Pamela Oliveira   | Product Owner  | [heypamela](https://github.com/heypamela)|
-| Vitor Teles       | Desenvolvedor  | [VitorGabrielTeles](https://github.com/VitorGabrielTeles)|
+| Pamela Oliveira   | Desenvolvedora | [heypamela](https://github.com/heypamela)|
+| Vitor Teles       | Tester         | [VitorGabrielTeles](https://github.com/VitorGabrielTeles)|
 
 
 
